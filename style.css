@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: hsl(217, 100%, 97%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step-background {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("assets/images/bg-sidebar-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.active {
+  background: hsl(206, 94%, 87%);
+  color: hsl(0, 0%, 0%);
+  border: 2px solid hsl(206, 94%, 87%);
+}
+
+.step-info {
+  display: none;
+}
+
+.step-controlls {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: hsl(0, 0%, 100%);
+}
+
+.next-step {
+  margin-right: 16px;
+  width: 90px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  background: hsl(213, 96%, 18%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.back-button {
+  margin-left: 16px;
+  width: 90px;
+  height: 40px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  color: hsl(231, 11%, 63%);
+  background: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.card-container {
+  margin: 0 auto;
+  padding: 20px;
+  width: 350px;
+  background: hsl(0, 0%, 100%);
+  height: 700px;
+  border-radius: 10px;
+  margin-top: -170px;
+}
+
+.info-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.personal-title {
+  margin-top: 20px;
+  font-size: 26px;
+  color: hsl(213, 96%, 18%);
+}
+
+.personal-description {
+  width: 250px;
+  line-height: 25px;
+  color: hsl(231, 11%, 63%);
+}
+
+.info-inputs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.name-input,
+.email-input,
+.phone-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.phone-label,
+.email-label,
+.name-label {
+  font-size: 13px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.name,
+.email,
+.phone {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+
+.name::placeholder,
+.email::placeholder,
+.phone::placeholder {
+  color: hsl(229, 24%, 87%);
+}
+
+.error-input {
+  border: 1px solid hsl(0, 100%, 50%);
+}
+
+.error-label {
+  visibility: hidden;
+  position: absolute;
+  right: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(0, 100%, 50%);
+}
