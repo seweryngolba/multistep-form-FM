@@ -98,9 +98,9 @@ body {
   padding: 20px;
   width: 350px;
   background: hsl(0, 0%, 100%);
-  height: 700px;
+  height: 550px;
   border-radius: 10px;
-  margin-top: -170px;
+  margin-top: -315px;
 }
 
 .info-step {
@@ -109,6 +109,7 @@ body {
   justify-content: flex-start;
   gap: 10px;
   height: 100%;
+  display: none;
 }
 
 .personal-title {
@@ -175,4 +176,128 @@ body {
   font-size: 13px;
   font-weight: 500;
   color: hsl(0, 100%, 50%);
+}
+
+.plan-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.box-offer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.arcade,
+.advanced,
+.pro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 10px;
+  height: 90px;
+  border-radius: 10px;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specs h4 {
+  color: hsl(213, 96%, 18%);
+}
+
+.pricing {
+  color: hsl(231, 11%, 63%);
+}
+
+.free-months {
+  display: none;
+  color: hsl(213, 96%, 18%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 28px;
+  margin: 0 15px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+
+input:checked + .slider::before {
+  transform: translateX(32px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.sub-switch {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(231, 100%, 99%);
+}
+
+.monthly,
+.yearly {
+  font-size: 16px;
+}
+
+.monthly {
+  color: hsl(213, 96%, 18%);
+}
+
+.yearly {
+  color: hsl(231, 11%, 63%);
 }
