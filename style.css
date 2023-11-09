@@ -320,7 +320,7 @@ input:checked + .slider::before {
   gap: 20px;
 }
 
-.online-services {
+.add-on {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -333,7 +333,9 @@ input:checked + .slider::before {
 .services-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  width: 200px;
+  margin-left: 10px;
 }
 
 .text-title {
@@ -346,11 +348,17 @@ input:checked + .slider::before {
   font-size: 14px;
 }
 
-.online-services input {
+.extras {
+  font-size: 14px;
+  color: hsl(243, 100%, 62%);
+  font-weight: 500;
+}
+
+.add-on input {
   display: none;
 }
 
-.online-services label {
+.add-on label {
   width: 24px;
   height: 24px;
   background-color: hsl(0, 0%, 100%);
@@ -360,11 +368,11 @@ input:checked + .slider::before {
   cursor: pointer;
 }
 
-.online-services input:checked + label {
+.add-on input:checked + label {
   background-color: hsl(243, 100%, 62%);
 }
 
-.online-services input:checked + label::before {
+.add-on input:checked + label::before {
   content: "\2713";
   color: hsl(0, 0%, 100%);
   margin-left: 5px;
