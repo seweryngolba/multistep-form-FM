@@ -179,7 +179,7 @@ body {
 }
 
 .plan-step {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
@@ -300,4 +300,73 @@ input:checked + .slider::before {
 
 .yearly {
   color: hsl(231, 11%, 63%);
+}
+
+.add-ons-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.add-ons-description {
+  width: 320px;
+}
+
+.add-ons-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.online-services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  position: relative;
+}
+
+.services-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.text-title {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.text-subtitle {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+}
+
+.online-services input {
+  display: none;
+}
+
+.online-services label {
+  width: 24px;
+  height: 24px;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.online-services input:checked + label {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.online-services input:checked + label::before {
+  content: "\2713";
+  color: hsl(0, 0%, 100%);
+  margin-left: 5px;
+  font-weight: 700;
 }
