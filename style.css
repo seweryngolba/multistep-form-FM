@@ -303,7 +303,7 @@ input:checked + .slider::before {
 }
 
 .add-ons-step {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
@@ -377,4 +377,43 @@ input:checked + .slider::before {
   color: hsl(0, 0%, 100%);
   margin-left: 5px;
   font-weight: 700;
+}
+
+.summary-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.summary-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: hsl(217, 100%, 97%);
+  border-radius: 20px;
+}
+
+.selected-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid hsl(231, 11%, 63%);
+}
+
+.extra-picks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-price {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
