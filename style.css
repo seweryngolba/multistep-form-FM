@@ -109,7 +109,6 @@ body {
   justify-content: flex-start;
   gap: 10px;
   height: 100%;
-  display: none;
 }
 
 .personal-title {
@@ -455,7 +454,7 @@ input:checked + .slider::before {
 }
 
 .thanks-step {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
