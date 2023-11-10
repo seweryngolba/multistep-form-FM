@@ -380,7 +380,7 @@ input:checked + .slider::before {
 }
 
 .summary-step {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
@@ -452,4 +452,31 @@ input:checked + .slider::before {
 .total-amount {
   font-weight: 700;
   color: hsl(243, 100%, 62%);
+}
+
+.thanks-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.icon-thanks {
+  width: 60px;
+  padding-bottom: 20px;
+}
+
+.thanks-title {
+  font-size: 28px;
+  color: hsl(213, 96%, 18%);
+}
+
+.thanks-description {
+  font-size: 18px;
+  text-align: center;
+  width: 330px;
+  color: hsl(231, 11%, 63%);
+  line-height: 25px;
 }
