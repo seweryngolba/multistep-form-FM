@@ -401,8 +401,14 @@ input:checked + .slider::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid hsl(231, 11%, 63%);
+}
+
+.plan-name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .extra-picks {
@@ -416,4 +422,34 @@ input:checked + .slider::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.plan-title {
+  color: hsl(213, 96%, 18%);
+}
+
+.change {
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.plan-price {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.extra-name,
+.total-name {
+  color: hsl(231, 11%, 63%);
+}
+
+.extra-price {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.total-amount {
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
 }
