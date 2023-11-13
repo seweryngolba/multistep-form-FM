@@ -7,6 +7,60 @@ let currentStep = 0;
 const nextButton = document.querySelector(".next-step");
 const backButton = document.querySelector(".back-button");
 
+const plans = document.querySelectorAll(
+  ".box-offer > .arcade, .box-offer > .advanced, .box-offer > .pro"
+);
+const switchInput = document.querySelector(".switch input");
+const monthlyLabel = document.querySelector(".monthly");
+const yearlyLabel = document.querySelector(".yearly");
+const freeMonths = document.querySelectorAll(".free-months");
+const priceMapping = {
+  arcade: 9,
+  advanced: 12,
+  pro: 15,
+};
+
+plans.forEach((plan) => {
+  plan.addEventListener("click", function () {
+    plans.forEach((p) => p.classList.remove("selected"));
+    plan.classList.add("selected");
+  });
+});
+
+switchInput.addEventListener("change", function () {
+  const textColorMonthly = switchInput.checked
+    ? "hsl(231, 11%, 63%)"
+    : "hsl(213, 96%, 18%)";
+  const textColorYearly = switchInput.checked
+    ? "hsl(213, 96%, 18%)"
+    : "hsl(231, 11%, 63%)";
+
+  monthlyLabel.style.color = textColorMonthly;
+  yearlyLabel.style.color = textColorYearly;
+
+  freeMonths.forEach((freeMonth) => {
+    if (switchInput.checked) {
+      freeMonth.style.display = "flex";
+    } else {
+      freeMonth.style.display = "none";
+    }
+  });
+
+  plans.forEach((plan) => {
+    const planType = plan.classList[0]; // arcade, advanced, pro
+    const priceElement = plan.querySelector(".pricing");
+    const freeMonthsElement = plan.querySelector(".free-months");
+
+    if (switchInput.checked) {
+      priceElement.textContent = `$${priceMapping[planType] * 10}/yr`;
+      freeMonthsElement.textContent = "2 months free";
+    } else {
+      priceElement.textContent = `$${priceMapping[planType]}/mo`;
+      freeMonthsElement.textContent = "2 months free";
+    }
+  });
+});
+
 function updateStepDisplay() {
   stepCards.forEach((card, index) => {
     if (index === currentStep) {
