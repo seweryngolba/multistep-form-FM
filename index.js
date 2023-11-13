@@ -268,6 +268,33 @@ addOns.forEach((addOn) => {
   checkBox.addEventListener("change", updateTotalPrice);
 });
 
+const checkOne = document.getElementById("check1");
+const checkTwo = document.getElementById("check2");
+const checkThree = document.getElementById("check3");
+const pickOne = document.querySelector(".summary-step .pick-one");
+const pickTwo = document.querySelector(".summary-step .pick-two");
+const pickThree = document.querySelector(".summary-step .pick-three");
+
+function updatePickDisplay(checkbox, pickElement) {
+  if (checkbox.checked) {
+    pickElement.style.display = "flex";
+  } else {
+    pickElement.style.display = "none";
+  }
+}
+
+checkOne.addEventListener("change", function () {
+  updatePickDisplay(checkOne, pickOne);
+});
+
+checkTwo.addEventListener("change", function () {
+  updatePickDisplay(checkTwo, pickTwo);
+});
+
+checkThree.addEventListener("change", function () {
+  updatePickDisplay(checkThree, pickThree);
+});
+
 function updateStepDisplay() {
   stepCards.forEach((card, index) => {
     if (index === currentStep) {
