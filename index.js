@@ -47,7 +47,7 @@ switchInput.addEventListener("change", function () {
   });
 
   plans.forEach((plan) => {
-    const planType = plan.classList[0]; // arcade, advanced, pro
+    const planType = plan.classList[0];
     const priceElement = plan.querySelector(".pricing");
     const freeMonthsElement = plan.querySelector(".free-months");
 
@@ -57,6 +57,19 @@ switchInput.addEventListener("change", function () {
     } else {
       priceElement.textContent = `$${priceMapping[planType]}/mo`;
       freeMonthsElement.textContent = "2 months free";
+    }
+  });
+});
+
+const addOns = document.querySelectorAll(".add-on");
+
+addOns.forEach((addOn) => {
+  const checkBox = addOn.querySelector(`input[type="checkbox"]`);
+  checkBox.addEventListener("change", function () {
+    if (checkBox.checked) {
+      addOn.classList.add("picked");
+    } else {
+      addOn.classList.remove("picked");
     }
   });
 });

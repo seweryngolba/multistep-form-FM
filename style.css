@@ -383,6 +383,11 @@ input:checked + .slider::before {
   font-weight: 700;
 }
 
+.picked {
+  border: 1px solid hsl(213, 96%, 18%);
+  background: hsl(217, 100%, 97%);
+}
+
 .summary-step {
   display: none;
   flex-direction: column;
